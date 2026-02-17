@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios interactivos | Marianistas por el Stiff-Person</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="container">
+        <h1>Ejercicios interactivos</h1>
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a href="index.html">Inicio</a>
+          <a href="informacion.html">Información</a>
+          <a href="ejercicios.html" aria-current="page">Ejercicios interactivos</a>
+          <a href="recursos.html">Organizaciones</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container stack">
+      <section class="card">
+        <h2>Cuestionario rápido</h2>
+        <p>Selecciona la respuesta correcta en cada pregunta.</p>
+
+        <form id="quiz-form" class="quiz">
+          <fieldset>
+            <legend>1) ¿Cuál es un desencadenante frecuente de espasmos en SPS?</legend>
+            <label><input type="radio" name="q1" value="a" /> Dormir 8 horas</label>
+            <label><input type="radio" name="q1" value="b" /> Ruidos inesperados</label>
+            <label><input type="radio" name="q1" value="c" /> Hidratación correcta</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>2) ¿Qué profesional debe liderar el diagnóstico?</legend>
+            <label><input type="radio" name="q2" value="a" /> Neurología especializada</label>
+            <label><input type="radio" name="q2" value="b" /> Solo entrenamiento deportivo</label>
+            <label><input type="radio" name="q2" value="c" /> Ninguno, se autodiagnostica</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>3) En el aula, una buena adaptación es:</legend>
+            <label><input type="radio" name="q3" value="a" /> Evitar cualquier ajuste</label>
+            <label><input type="radio" name="q3" value="b" /> Aumentar exposición al ruido</label>
+            <label><input type="radio" name="q3" value="c" /> Ajustar tiempos y reducir sobreestimulación</label>
+          </fieldset>
+
+          <button type="submit" class="button">Corregir cuestionario</button>
+        </form>
+
+        <p id="quiz-result" class="result" aria-live="polite"></p>
+      </section>
+
+      <section class="card">
+        <h2>Actividad de empatía</h2>
+        <p>
+          Escribe una acción concreta que puedas hacer esta semana para apoyar a
+          una persona con una enfermedad neurológica poco frecuente.
+        </p>
+        <form id="empathy-form" class="empathy">
+          <label for="empathy-input">Mi compromiso:</label>
+          <textarea id="empathy-input" rows="4" placeholder="Ejemplo: acompañar en una cita, adaptar actividades, escuchar sin juzgar..."></textarea>
+          <button type="submit" class="button">Guardar compromiso</button>
+        </form>
+        <p id="empathy-result" class="result" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-content">
+        <p>© 2026 Marianistas por el Stiff-Person</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
