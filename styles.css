@@ -3,8 +3,10 @@
   --primary: #1f4b7d;
   --primary-dark: #143250;
   --accent: #16a085;
+  --accent-dark: #117760;
   --text: #1f2933;
   --card: #ffffff;
+  --panel: #f8fbff;
 }
 
 * {
@@ -31,6 +33,10 @@ body {
   padding: 2.5rem 0;
 }
 
+.ejercicios-header {
+  background: linear-gradient(130deg, #1f4b7d 5%, #2d5f9a 50%, #16a085 100%);
+}
+
 .tag {
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -39,7 +45,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   margin-top: 0;
 }
 
@@ -94,6 +101,15 @@ main {
   box-shadow: 0 6px 16px rgba(16, 37, 57, 0.08);
 }
 
+.interactive-panel {
+  border: 1px solid #d8e5f2;
+  background: linear-gradient(180deg, var(--panel) 0%, #fff 100%);
+}
+
+.ejercicios-layout {
+  gap: 1rem;
+}
+
 .notice {
   border-left: 5px solid var(--accent);
 }
@@ -111,15 +127,45 @@ main {
   font-weight: 700;
 }
 
+.button:hover {
+  background: var(--accent-dark);
+}
+
 .quiz fieldset {
   border: 1px solid #cfd8e3;
   border-radius: 8px;
   margin-bottom: 1rem;
+  background: #fff;
 }
 
-.quiz label {
+.quiz label,
+.checklist-form label {
   display: block;
   margin: 0.45rem 0;
+}
+
+.checklist-form {
+  padding: 0.5rem;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid #d7e2ee;
+}
+
+.progress-wrap {
+  margin-top: 0.75rem;
+  width: 100%;
+  height: 12px;
+  border-radius: 999px;
+  background: #dce8f3;
+  overflow: hidden;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #16a085, #1f4b7d);
+  transition: width 0.25s ease;
 }
 
 textarea,
@@ -132,7 +178,6 @@ input {
   margin-top: 0.35rem;
 }
 
-.contact-form,
 .empathy {
   display: grid;
   gap: 0.75rem;
@@ -147,9 +192,22 @@ input {
   padding-left: 1.2rem;
 }
 
-.resource-list a {
+.resource-list a,
+.card a {
   color: var(--primary);
   font-weight: 700;
+}
+
+.testimonials {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.testimonials article {
+  padding: 0.85rem;
+  border-radius: 10px;
+  border: 1px solid #dbe5ef;
+  background: #fbfdff;
 }
 
 footer {
