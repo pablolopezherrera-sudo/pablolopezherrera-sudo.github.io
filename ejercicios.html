@@ -7,44 +7,53 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header ejercicios-header">
       <div class="container">
         <h1>Ejercicios interactivos</h1>
+        <p class="lead">Refuerza conocimientos, practica empatía y prepara acciones concretas de apoyo.</p>
         <nav class="main-nav" aria-label="Navegación principal">
           <a href="index.html">Inicio</a>
           <a href="informacion.html">Información</a>
           <a href="ejercicios.html" aria-current="page">Ejercicios interactivos</a>
           <a href="recursos.html">Organizaciones</a>
+          <a href="testimonios.html">Testimonios</a>
           <a href="contacto.html">Contacto</a>
         </nav>
       </div>
     </header>
 
-    <main class="container stack">
-      <section class="card">
-        <h2>Cuestionario rápido</h2>
+    <main class="container stack ejercicios-layout">
+      <section class="card interactive-panel">
+        <h2>1) Cuestionario ampliado</h2>
         <p>Selecciona la respuesta correcta en cada pregunta.</p>
 
         <form id="quiz-form" class="quiz">
           <fieldset>
-            <legend>1) ¿Cuál es un desencadenante frecuente de espasmos en SPS?</legend>
+            <legend>¿Cuál es un desencadenante frecuente de espasmos en SPS?</legend>
             <label><input type="radio" name="q1" value="a" /> Dormir 8 horas</label>
             <label><input type="radio" name="q1" value="b" /> Ruidos inesperados</label>
             <label><input type="radio" name="q1" value="c" /> Hidratación correcta</label>
           </fieldset>
 
           <fieldset>
-            <legend>2) ¿Qué profesional debe liderar el diagnóstico?</legend>
+            <legend>¿Qué profesional debe liderar el diagnóstico?</legend>
             <label><input type="radio" name="q2" value="a" /> Neurología especializada</label>
             <label><input type="radio" name="q2" value="b" /> Solo entrenamiento deportivo</label>
             <label><input type="radio" name="q2" value="c" /> Ninguno, se autodiagnostica</label>
           </fieldset>
 
           <fieldset>
-            <legend>3) En el aula, una buena adaptación es:</legend>
+            <legend>En el aula, una buena adaptación es:</legend>
             <label><input type="radio" name="q3" value="a" /> Evitar cualquier ajuste</label>
             <label><input type="radio" name="q3" value="b" /> Aumentar exposición al ruido</label>
             <label><input type="radio" name="q3" value="c" /> Ajustar tiempos y reducir sobreestimulación</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>¿Qué vía biológica está implicada con frecuencia en SPS?</legend>
+            <label><input type="radio" name="q4" value="a" /> Alteración de señales inhibitorias (GABA)</label>
+            <label><input type="radio" name="q4" value="b" /> Solo problema óseo</label>
+            <label><input type="radio" name="q4" value="c" /> Déficit de vitamina C exclusivamente</label>
           </fieldset>
 
           <button type="submit" class="button">Corregir cuestionario</button>
@@ -53,11 +62,46 @@
         <p id="quiz-result" class="result" aria-live="polite"></p>
       </section>
 
-      <section class="card">
-        <h2>Actividad de empatía</h2>
+      <section class="card interactive-panel">
+        <h2>2) Verdadero o falso</h2>
+        <p>Marca cada afirmación y comprueba tu resultado.</p>
+        <form id="true-false-form" class="quiz">
+          <fieldset>
+            <legend>El SPS siempre aparece de la misma forma en todas las personas.</legend>
+            <label><input type="radio" name="tf1" value="falso" /> Falso</label>
+            <label><input type="radio" name="tf1" value="verdadero" /> Verdadero</label>
+          </fieldset>
+          <fieldset>
+            <legend>Reducir sobreestimulación puede ayudar en el día a día.</legend>
+            <label><input type="radio" name="tf2" value="verdadero" /> Verdadero</label>
+            <label><input type="radio" name="tf2" value="falso" /> Falso</label>
+          </fieldset>
+          <button type="submit" class="button">Comprobar</button>
+        </form>
+        <p id="tf-result" class="result" aria-live="polite"></p>
+      </section>
+
+      <section class="card interactive-panel">
+        <h2>3) Tu plan de apoyo semanal</h2>
+        <p>Selecciona acciones concretas. Verás tu progreso automáticamente.</p>
+        <form id="support-plan-form" class="checklist-form">
+          <label><input type="checkbox" name="task" /> Informarme en una fuente médica fiable.</label>
+          <label><input type="checkbox" name="task" /> Hablar con una persona cercana sobre cómo apoyar sin invadir.</label>
+          <label><input type="checkbox" name="task" /> Adaptar una actividad para reducir ruido y estrés.</label>
+          <label><input type="checkbox" name="task" /> Compartir un recurso útil de una asociación de pacientes.</label>
+          <label><input type="checkbox" name="task" /> Reservar un momento de escucha activa para un familiar/cuidador.</label>
+        </form>
+        <div class="progress-wrap" aria-label="Progreso del plan">
+          <div id="support-progress" class="progress-bar"></div>
+        </div>
+        <p id="support-result" class="result">Progreso: 0% completado.</p>
+      </section>
+
+      <section class="card interactive-panel">
+        <h2>4) Actividad de empatía</h2>
         <p>
-          Escribe una acción concreta que puedas hacer esta semana para apoyar a
-          una persona con una enfermedad neurológica poco frecuente.
+          Escribe una acción concreta que puedas hacer esta semana para apoyar a una persona
+          con una enfermedad neurológica poco frecuente.
         </p>
         <form id="empathy-form" class="empathy">
           <label for="empathy-input">Mi compromiso:</label>
@@ -77,3 +121,4 @@
     <script src="script.js"></script>
   </body>
 </html>
+
